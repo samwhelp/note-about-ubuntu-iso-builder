@@ -16,6 +16,8 @@
 
 * [實作案例](#實作案例)
 * [Respin](#respin)
+* [Boot ISO By GRUB](#boot-iso-by-grub)
+* [Live Account](#live-account)
 * [相關筆記](#相關筆記)
 
 
@@ -48,6 +50,58 @@
 | ----- | ------ |
 | [ubuntu-iso-builder-remix-lxqt-with-kwin](https://github.com/samwhelp/ubuntu-iso-builder-remix-lxqt-with-kwin) | [ubuntu-iso-builder-respin-lxqt-with-kwin](https://github.com/samwhelp/ubuntu-iso-builder-respin-lxqt-with-kwin) |
 | [ubuntu-iso-builder-remix-mate-with-compiz](https://github.com/samwhelp/ubuntu-iso-builder-remix-mate-with-compiz) | [ubuntu-iso-builder-respin-mate-with-compiz](https://github.com/samwhelp/ubuntu-iso-builder-respin-mate-with-compiz) |
+
+
+
+
+## Boot ISO By GRUB
+
+> 將產出的「iso檔案」放置到「`/opt/iso/ubuntu/latest/ubuntu.iso`」這個路徑
+
+> 產生一個檔案「`/boot/grub/custom.cfg`」，內容如下
+
+``` sh
+menuentry "Ubuntu Live ISO" --class Ubuntu {
+	set iso_file="/opt/iso/ubuntu/latest/ubuntu.iso"
+	search --set=iso_partition --no-floppy --file $iso_file
+	probe --set=iso_partition_uuid --fs-uuid $iso_partition
+	set img_dev="/dev/disk/by-uuid/$iso_partition_uuid"
+	loopback loop ($iso_partition)$iso_file
+
+	set extra_option=""
+	#set extra_option="components quiet splash"
+
+	set locale_option=""
+	#set locale_option="locales=en_US.UTF-8"
+	#set locale_option="locales=zh_TW.UTF-8"
+	#set locale_option="locales=zh_CN.UTF-8"
+	#set locale_option="locales=zh_HK.UTF-8"
+	#set locale_option="locales=ja_JP.UTF-8"
+	#set locale_option="locales=ko_KR.UTF-8"
+
+	set boot_option="${locale_option} ${extra_option}"
+	linux (loop)/casper/vmlinuz boot=casper iso-scan/filename=${iso_file} ${boot_option}
+	initrd (loop)/casper/initrd
+}
+```
+
+> 重新開機後，就會在「GRUB」的開機選單，看到「`Ubuntu Live ISO`」這個選項。
+
+
+
+
+## Live Account
+
+| Account  | Value  |
+| -------- | ------ |
+| Username | `live` |
+| Password | ``     |
+
+若想要移除目前帳號的密碼，可以執行下面指令
+
+``` sh
+sudo passwd -d $(whoami)
+```
 
 
 
