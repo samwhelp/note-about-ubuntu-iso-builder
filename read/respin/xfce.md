@@ -42,8 +42,6 @@ parent: Respin
 
 
 
-
-
 ## 相關筆記
 
 | Link | GitHub |
