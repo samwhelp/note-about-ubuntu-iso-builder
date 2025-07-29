@@ -29,7 +29,7 @@ parent: Respin
 | ------ | ------ |
 | [ubuntu-iso-builder-import-pacstall-gnome-shell-style-maccity](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-gnome-shell-style-maccity) |  |
 | [ubuntu-iso-builder-import-pacstall-gnome-shell-style-wincity](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-gnome-shell-style-wincity) |  |
-| [ubuntu-iso-builder-import-pacstall-gnome-shell-attach-themes](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-gnome-shell-attach-themes) |  |
+| [ubuntu-iso-builder-import-pacstall-gnome-shell-attach-themes](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-gnome-shell-attach-themes) | [ubuntu-iso-builder-include-pacstall-gnome-shell-attach-themes](https://github.com/samwhelp/ubuntu-iso-builder-include-pacstall-gnome-shell-attach-themes) |
 | [ubuntu-iso-builder-import-pacstall-gnome-shell-theme-vimix](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-gnome-shell-theme-vimix) |  |
 | [ubuntu-iso-builder-import-pacstall-gnome-shell-theme-orchis](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-gnome-shell-theme-orchis) |  |
 | [ubuntu-iso-builder-import-pacstall-gnome-shell-theme-graphite](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-gnome-shell-theme-graphite) |  |

@@ -29,7 +29,7 @@ parent: Respin
 | ------ | ------ |
 | [ubuntu-iso-builder-import-pacstall-cinnamon-style-maccity](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-cinnamon-style-maccity) |  |
 | [ubuntu-iso-builder-import-pacstall-cinnamon-style-wincity](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-cinnamon-style-wincity) |  |
-| [ubuntu-iso-builder-import-pacstall-cinnamon-attach-themes](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-cinnamon-attach-themes) |  |
+| [ubuntu-iso-builder-import-pacstall-cinnamon-attach-themes](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-cinnamon-attach-themes) | [ubuntu-iso-builder-include-pacstall-cinnamon-attach-themes](https://github.com/samwhelp/ubuntu-iso-builder-include-pacstall-cinnamon-attach-themes) |
 | [ubuntu-iso-builder-import-pacstall-cinnamon-theme-vimix](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-cinnamon-theme-vimix) |  |
 | [ubuntu-iso-builder-import-pacstall-cinnamon-theme-orchis](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-cinnamon-theme-orchis) |  |
 | [ubuntu-iso-builder-import-pacstall-cinnamon-theme-graphite](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-cinnamon-theme-graphite) |  |

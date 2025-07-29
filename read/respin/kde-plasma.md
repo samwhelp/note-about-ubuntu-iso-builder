@@ -29,7 +29,7 @@ parent: Respin
 | ------ | ------ |
 | [ubuntu-iso-builder-import-pacstall-kde-plasma-style-maccity](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-kde-plasma-style-maccity) |  |
 | [ubuntu-iso-builder-import-pacstall-kde-plasma-style-wincity](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-kde-plasma-style-wincity) |  |
-| [ubuntu-iso-builder-import-pacstall-kde-plasma-attach-themes](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-kde-plasma-attach-themes) |  |
+| [ubuntu-iso-builder-import-pacstall-kde-plasma-attach-themes](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-kde-plasma-attach-themes) | [ubuntu-iso-builder-include-pacstall-kde-plasma-attach-themes](https://github.com/samwhelp/ubuntu-iso-builder-include-pacstall-kde-plasma-attach-themes) |
 | [ubuntu-iso-builder-import-pacstall-kde-plasma-theme-vimix](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-kde-plasma-theme-vimix) |  |
 | [ubuntu-iso-builder-import-pacstall-kde-plasma-theme-orchis](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-kde-plasma-theme-orchis) |  |
 | [ubuntu-iso-builder-import-pacstall-kde-plasma-theme-graphite](https://github.com/samwhelp/ubuntu-iso-builder-import-pacstall-kde-plasma-theme-graphite) |  |
