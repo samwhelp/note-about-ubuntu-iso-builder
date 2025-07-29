@@ -37,6 +37,8 @@
 
 ## Respin
 
+> [More...](read/respin)
+
 | Remix | Respin |
 | ----- | ------ |
 | [ubuntu-iso-builder-remix-gnome-shell](https://github.com/samwhelp/ubuntu-iso-builder-remix-gnome-shell) | [ubuntu-iso-builder-respin-gnome-shell](https://github.com/samwhelp/ubuntu-iso-builder-respin-gnome-shell) |
