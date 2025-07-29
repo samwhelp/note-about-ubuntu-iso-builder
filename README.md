@@ -37,7 +37,7 @@
 
 ## Respin
 
-> [More...](read/respin)
+> [更多...](https://samwhelp.github.io/note-about-ubuntu-iso-builder/read/respin.html)
 
 | Remix | Respin |
 | ----- | ------ |
