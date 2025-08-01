@@ -23,6 +23,7 @@ parent: Respin
 | Remix  | Respin |
 | ------ | ------ |
 | [ubuntu-iso-builder-remix-kde-plasma](https://github.com/samwhelp/ubuntu-iso-builder-remix-kde-plasma) | [ubuntu-iso-builder-respin-kde-plasma](https://github.com/samwhelp/ubuntu-iso-builder-respin-kde-plasma) |
+| [ubuntu-iso-builder-remix-kde-plasma-theme-orchis](https://github.com/samwhelp/ubuntu-iso-builder-remix-kde-plasma-theme-orchis) | [ubuntu-iso-builder-respin-kde-plasma-theme-orchis](https://github.com/samwhelp/ubuntu-iso-builder-respin-kde-plasma-theme-orchis) |
 
 
 | Remix  | Respin |
