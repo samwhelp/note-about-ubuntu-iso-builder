@@ -27,12 +27,16 @@ mount: /usr/sbin/losetup
 
 
 
+
 ## linux-image-generic
+
+run
 
 ``` sh
 apt-cache search linux-image-generic
 ```
 
+show
 
 ```
 linux-image-extra-virtual - Extra drivers for Virtual Linux kernel image
@@ -70,4 +74,22 @@ chroot install
 
 ``` sh
 apt-get install linux-image-6.14.0-27-generic linux-modules-extra-6.14.0-27-generic linux-firmware intel-microcode amd64-microcode
+```
+
+
+
+
+## linux-image-generic-hwe-24.04
+
+run
+
+``` sh
+apt-cache show linux-image-generic-hwe-24.04 | grep '^Depends'
+```
+
+show
+
+```
+Depends: linux-image-6.14.0-28-generic, linux-modules-extra-6.14.0-28-generic, linux-firmware, intel-microcode, amd64-microcode
+Depends: linux-image-6.14.0-15-generic, linux-modules-extra-6.14.0-15-generic, linux-firmware, intel-microcode, amd64-microcode
 ```
