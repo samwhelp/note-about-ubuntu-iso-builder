@@ -1,0 +1,96 @@
+I had a similiar problem, here my solution:
+---
+Package: casper
+Version: 1.340.2
+
+Effect:
+filesystem.squashfs cannot be mounted during boot. The system is packed
+in iso-image file of type "udf".
+
+This error message is displayed:
+"(initramfs) mount: mounting /dev/loop0 on //filesystem.squashfs failed: invalid argument
+can not mount /dev/loop0 (...) on //filesystem.squashfs"
+
+Problem:
+During start-up, the iso-image file will not be mounted properly.
+The file system of the iso-image is "udf". The mount operation is
+performed with type "iso9660" instead "udf".
+
+Reason:
+The file system of the iso-image is determined with "fstype", located in
+/usr/lib/klibc/bin.
+Unfortunately, fstype cannot distinguish between iso9660 and udf. The
+type "iso9660" is always reported, also if "udf" is the correct file type.
+This leads to a wrong mount command.
+The iso-image file will be mounted, but all files which are larger
+then 4 GB within the image file, cannot be read correctly.
+
+Proposal for solution:
+Changes within "/usr/share/initramfs-tools/scripts/casper-helpers":
+If fstype detect an iso9660 file type, an additional check is necessary
+to distinguish, if it is udf or iso9660.
+For this, add following four source lines (marked with "added by.."):
+--- /usr/share/initramfs-tools/scripts/casper-helpers ------------------
+... snip ...
+get_fstype() {
+    local FSTYPE
+    local FSSIZE
+    eval $(fstype < $1)
+    # added: fstype cannot detect file system of type "udf"
+    if [ "$FSTYPE" == "iso9660" ]; then            # added
+       /sbin/blkid -s TYPE -o value $1 2>/dev/null # added
+       return 0                                    # added
+    fi                                             # added
+    if [ "$FSTYPE" != "unknown" ]; then
+        echo $FSTYPE
+        return 0
+    fi
+    /sbin/blkid -s TYPE -o value $1 2>/dev/null
+}
+... snip ...
+---------------------------------------------------------------------
+
+
+
+
+
+#### Configuration #######################################
+dpkg --list casper
+
+Gewünscht=Unbekannt/Installieren/R=Entfernen/P=Vollständig Löschen/Halten
+| Status=Nicht/Installiert/Config/U=Entpackt/halb konFiguriert/
+         Halb installiert/Trigger erWartet/Trigger anhängig
+|/ Fehler?=(kein)/R=Neuinstallation notwendig (Status, Fehler:
+GROSS=schlecht)
+||/ Name                                                        Version
+                                            Architektur  Beschreibung
++++-===========================================================-===================================================-============-================================================================================================
+ii  casper                                                      1.340.2
+                                            i386         Run a "live"
+preinstalled system from read-only media
+
+dpkg --status casper
+
+Package: casper
+Status: install ok installed
+Priority: extra
+Section: misc
+Installed-Size: 256
+Maintainer: Ubuntu Developers <email address hidden>
+Architecture: i386
+Version: 1.340.2
+Depends: libc6 (>= 2.8), libplymouth2 (>= 0.8.0~-13~ppa1),
+initramfs-tools (>= 0.92bubuntu55), busybox-initramfs (>=
+1:1.1.3-4ubuntu3), dmsetup, user-setup, sudo, eject, uuid-runtime,
+localechooser-data (>= 2.03ubuntu1), util-linux (>= 2.15-1), file, lzma,
+udev (>= 174), cifs-utils
+Breaks: genext2fs (<< 1.4.1)
+Conflicts: live-initramfs, usplash (<< 0.4-43)
+Conffiles:
+ /etc/casper.conf 873654121350964ec51b3ccd8c0186cd
+ /etc/init.d/casper 8bdad2b8ddb53a7450a832837593f34d
+Description: Run a "live" preinstalled system from read-only media
+Tag: admin::boot, admin::filesystem, implemented-in::shell,
+protocol::smb, role::plugin, scope::utility, special::completely-tagged,
+works-with-format::iso9660
+--
