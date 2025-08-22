@@ -27,6 +27,12 @@ mount: /usr/sbin/losetup
 
 
 
+## kernel package installed
+
+``` sh
+dpkg -l 'linux*'
+```
+
 
 ## linux-image-generic
 
