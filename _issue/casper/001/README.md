@@ -24,3 +24,50 @@ mount: /usr/sbin/losetup
 ```
 
 > Google Search: [losetup casper mount](https://www.google.com/search?q=losetup+casper+mount)
+
+
+
+## linux-image-generic
+
+``` sh
+apt-cache search linux-image-generic
+```
+
+
+```
+linux-image-extra-virtual - Extra drivers for Virtual Linux kernel image
+linux-image-extra-virtual-hwe-24.04 - Extra drivers for Virtual Linux kernel image
+linux-image-extra-virtual-hwe-24.04-edge - Extra drivers for Virtual Linux kernel image
+linux-image-generic - Generic Linux kernel image
+linux-image-generic-hwe-24.04 - Generic Linux kernel image
+linux-image-generic-hwe-24.04-edge - Generic Linux kernel image
+linux-image-extra-virtual-6.14 - Extra drivers for Virtual Linux kernel image
+linux-image-generic-6.14 - Generic Linux kernel image
+```
+
+run
+
+``` sh
+apt-cache show linux-image-generic | grep '^Depends'
+```
+
+show
+
+```
+Depends: linux-image-6.14.0-28-generic, linux-modules-extra-6.14.0-28-generic, linux-firmware, intel-microcode, amd64-microcode
+Depends: linux-image-6.14.0-15-generic, linux-modules-extra-6.14.0-15-generic, linux-firmware, intel-microcode, amd64-microcode
+```
+
+
+
+chroot remove
+
+``` sh
+apt-get purge linux-image-6.14.0-28-generic linux-modules-extra-6.14.0-28-generic
+```
+
+chroot install
+
+``` sh
+apt-get install linux-image-6.14.0-27-generic linux-modules-extra-6.14.0-27-generic linux-firmware intel-microcode amd64-microcode
+```
