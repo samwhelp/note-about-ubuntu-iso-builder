@@ -1,3 +1,3 @@
 
 
-sudo losetup /dev/loop1 floppy.img
+sudo losetup /dev/loop0 floppy.img
