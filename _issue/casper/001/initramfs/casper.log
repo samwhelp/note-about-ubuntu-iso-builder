@@ -1,0 +1,8 @@
+Begin: Running /scripts/casper-premount ... done.
+Begin: ...waiting for devs... ... done.
+touch: /dev/.initramfs/lupin-waited-for-devs: No such file or directory
+done.
+losetup: /cdrom/casper/filesystem.squashfs: failed to set up loop device: Invalid argument
+stdin: Not a typewriter
+mount: mounting /dev/loop1 on /filesystem.squashfs failed: No such device
+Can not mount /dev/loop1 (/cdrom/casper/filesystem.squashfs) on /filesystem.squashfs
