@@ -17,6 +17,13 @@
 
 
 
+## article
+
+* [install linux mint](https://amitmason.blogspot.com/2018/07/linux-mint.html)
+
+
+
+
 ## losetup
 
 ``` sh
