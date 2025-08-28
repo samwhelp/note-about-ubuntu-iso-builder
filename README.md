@@ -101,6 +101,14 @@ menuentry "Ubuntu Live ISO" --class Ubuntu {
 | Username | `live` |
 | Password |        |
 
+
+若想要更改目前帳號的密碼，可以執行下面指令
+
+``` sh
+sudo passwd $(whoami)
+```
+
+
 若想要移除目前帳號的密碼，可以執行下面指令
 
 ``` sh
