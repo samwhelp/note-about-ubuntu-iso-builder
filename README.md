@@ -92,6 +92,9 @@ menuentry "Ubuntu Live ISO" --class Ubuntu {
 > 重新開機後，就會在「GRUB」的開機選單，看到「`Ubuntu Live ISO`」這個選項。
 
 
+> [/usr/share/initramfs-tools/scripts/casper](https://git.launchpad.net/ubuntu/+source/casper/tree/scripts/casper#n32)
+
+
 
 
 ## Live Account
