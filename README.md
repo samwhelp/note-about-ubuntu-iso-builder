@@ -104,6 +104,8 @@ menuentry "Ubuntu Live ISO" --class Ubuntu {
 | Username | `live` |
 | Password |        |
 
+> 目前沒有設定密碼
+
 
 若想要更改目前帳號的密碼，可以執行下面指令
 
