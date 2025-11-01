@@ -55,3 +55,13 @@ has_children: true
 | [ubuntu-iso-builder-remix-sway](https://github.com/samwhelp/ubuntu-iso-builder-remix-sway) | [ubuntu-iso-builder-respin-sway](https://github.com/samwhelp/ubuntu-iso-builder-respin-sway) |
 | [ubuntu-iso-builder-remix-labwc](https://github.com/samwhelp/ubuntu-iso-builder-remix-labwc) | [ubuntu-iso-builder-respin-labwc](https://github.com/samwhelp/ubuntu-iso-builder-respin-labwc) |
 | [ubuntu-iso-builder-remix-wayfire](https://github.com/samwhelp/ubuntu-iso-builder-remix-wayfire) | [ubuntu-iso-builder-respin-wayfire](https://github.com/samwhelp/ubuntu-iso-builder-respin-wayfire) |
+
+
+
+
+| Remix | Respin |
+| ----- | ------ |
+| [ubuntu-iso-builder-remix-spectrwm](https://github.com/samwhelp/ubuntu-iso-builder-remix-spectrwm) | [ubuntu-iso-builder-respin-spectrwm](https://github.com/samwhelp/ubuntu-iso-builder-respin-spectrwm) |
+| [ubuntu-iso-builder-remix-cwm](https://github.com/samwhelp/ubuntu-iso-builder-remix-cwm) | [ubuntu-iso-builder-respin-cwm](https://github.com/samwhelp/ubuntu-iso-builder-respin-cwm) |
+| [ubuntu-iso-builder-remix-pekwm](https://github.com/samwhelp/ubuntu-iso-builder-remix-pekwm) | [ubuntu-iso-builder-respin-pekwm](https://github.com/samwhelp/ubuntu-iso-builder-respin-pekwm) |
+| [ubuntu-iso-builder-remix-icewm](https://github.com/samwhelp/ubuntu-iso-builder-remix-icewm) | [ubuntu-iso-builder-respin-icewm](https://github.com/samwhelp/ubuntu-iso-builder-respin-icewm) |
